@@ -1,18 +1,26 @@
-// randomly place windows
+// randomly generate windows
 // collect all the divs
 var divs = document.getElementsByClassName("root");
 // get window width and height
 var winWidth = window.innerWidth;
 var winHeight = window.innerHeight;
 
-// i stands for "index". you could also call this banana or haircut. it's a variable
+// iterate through divs
 for (var i = 0; i < divs.length; i++) {
     // shortcut! the current div in the list
     var thisDiv = divs[i];
 
-    // get random numbers for each element
-    randomTop = getRandomNumber(0, winHeight - 300);
-    randomLeft = getRandomNumber(0, winWidth - 300);
+    // get random dimensions for each element
+    randomWidth = getRandomNumber(400, 600);
+    randomHeight = getRandomNumber(300, 600);
+
+    // get random positions for each element
+    randomTop = getRandomNumber(0, winHeight - randomHeight);
+    randomLeft = getRandomNumber(0, winWidth - randomWidth);
+
+    // update width and height
+    thisDiv.style.width = randomWidth + "px";
+    thisDiv.style.height = randomHeight + "px";
 
     // update top and left position
     thisDiv.style.top = randomTop + "px";
@@ -25,7 +33,6 @@ function getRandomNumber(min, max) {
 }
 
 // interactive.js moveable windows
-
 const position = { x: 0, y: 0 };
 
 // target elements with the "draggable" class

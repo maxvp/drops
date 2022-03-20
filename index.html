@@ -5,20 +5,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
-        <title>Drops</title>
+        <title>DROPS</title>
     </head>
     <body>
         <script type="module" src="index.js"></script>
 
-        <div id="heading">
-            <h1>Drops</h1>
-        </div>
+        <div id="heading">DROPS</div>
 
         <!-- TODO: figure out how to pass "this" context to disappear() function -->
-        <!-- TODO: refactor flex-basis to exclude button from dragging -->
         <div class="root draggable resizable" id="one">
-            <div class="title">
-                <div>QuickTime Player</div>
+            <div class="bar">
+                <div class="title">Sonic Blue</div>
                 <button
                     onclick="this.parentElement.parentElement.style.display = 'none';"
                 >
@@ -29,8 +26,8 @@
         </div>
 
         <div class="root draggable resizable" id="two">
-            <div class="title">
-                <div>MacPaint</div>
+            <div class="bar">
+                <div class="title">Shrek Green</div>
                 <button
                     onclick="this.parentElement.parentElement.style.display = 'none';"
                 >
@@ -41,15 +38,15 @@
         </div>
 
         <div class="root draggable resizable" id="three">
-            <div class="title">
-                <div>Lotus 123</div>
+            <div class="bar">
+                <div class="title">Clockwork Orange</div>
                 <button
                     onclick="this.parentElement.parentElement.style.display = 'none';"
                 >
                     X
                 </button>
             </div>
-            <div class="content">Here's some more content.</div>
+            <div class="content">Here's even more content.</div>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>

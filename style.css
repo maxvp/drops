@@ -1,10 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 /* variables */
 :root {
-    --border: 4px black solid;
+    --border: 3px black solid;
 }
 
 html {
     box-sizing: border-box;
+    font-family: "Anonymous Pro", "Courier New", Courier, monospace;
+}
+
+/* TODO: add mobile/responsive features */
+
+/* project title */
+#heading {
+    position: absolute;
+    font-weight: 700;
+    font-size: 10em;
 }
 
 /* window content */
@@ -13,34 +25,62 @@ html {
     display: flex;
     flex-direction: column;
     border: var(--border);
-    width: 400px;
-    height: 300px;
+    min-width: 300px;
+    min-height: 300px;
 
+    touch-action: none;
+
+    /* disable text selection */
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
 }
 
+/* focus hovered window */
 .root:hover {
     z-index: 50;
 }
 
 /* window title bar */
-.title {
+.bar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: white;
     font-size: 2em;
     font-weight: bold;
-    padding-left: 0.25em;
+    padding: 0.25em;
     border-bottom: var(--border);
+}
+
+/* window title */
+.title {
+    width: 100%;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* window content */
 .content {
+    font-size: 1.75em;
     padding: 0.25em;
+}
+
+/* window button */
+.bar button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0%);
+    width: 40px;
+    text-align: center;
+}
+.bar button:hover {
+    background-color: pink;
+}
+.bar button:active {
+    background-color: red;
 }
 
 /* specific windows */
@@ -52,17 +92,4 @@ html {
 }
 #three {
     background-color: orange;
-}
-
-/* window button */
-.title button {
-    border: none;
-    background-color: rgba(0, 0, 0, 0%);
-    width: 40px;
-}
-.title button:hover {
-    background-color: pink;
-}
-.title button:active {
-    background-color: red;
 }
