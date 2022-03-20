@@ -1,5 +1,48 @@
+/* variables */
+:root {
+    --border: 4px black solid;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+/* window content */
 .root {
-    background-color: green;
-    width: 200px;
-    height: 200px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border: var(--border);
+    width: 400px;
+    height: 300px;
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+/* window title bar */
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    font-size: 2em;
+    font-weight: bold;
+    padding-inline: 0.25em;
+    border-bottom: var(--border);
+}
+
+/* window content */
+.content {
+    padding: 0.25em;
+}
+
+/* specific windows */
+#one {
+    background-color: skyblue;
+}
+#two {
+    background-color: limegreen;
 }
