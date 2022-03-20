@@ -5,10 +5,16 @@
     --border: 3px black solid;
 }
 
-html {
+* {
     box-sizing: border-box;
     font-family: "Anonymous Pro", "Courier New", Courier, monospace;
 }
+
+/* initial blur */
+/*body > *:not(#description) {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+}*/
 
 /* TODO: add mobile/responsive features */
 
@@ -23,10 +29,11 @@ html {
 
 /* global paragraph rules */
 p {
+    display: flex;
+    align-items: center;
     font-size: 1.5em;
     margin: 0;
     padding: 0;
-    line-height: 0;
 }
 
 /* links */
@@ -56,7 +63,7 @@ p a {
 
 /* focus hovered window */
 .root:hover {
-    z-index: 50;
+    z-index: 99;
 }
 
 /* window title bar */
@@ -110,7 +117,13 @@ p a {
     background-color: red;
 }
 
-/* specific windows */
+/* description */
+#description {
+    z-index: 99;
+    background-color: lightgray;
+}
+
+/* other windows */
 #one {
     background-color: skyblue;
 }

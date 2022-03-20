@@ -15,16 +15,35 @@
     </head>
     <body>
         <div>
+            <!-- TODO: come up with more elegant link solution -->
             <p>
-                <a href="https://www.maxvphillips.com/"
-                    ><i data-feather="corner-left-up"></i> Maximillian V.
-                    Phillips</a
+                <a href="https://www.maxvphillips.com/">
+                    <i data-feather="arrow-left" id="arrow"></i>&nbsp;</a
+                ><a href="https://www.maxvphillips.com/">
+                    Maximillian V. Phillips</a
                 >
             </p>
             <h1 id="heading">DROPS</h1>
         </div>
 
         <!-- TODO: figure out how to pass "this" context to disappear() function -->
+        <div class="root draggable resizable" id="description">
+            <div class="bar">
+                <div class="title">Description</div>
+                <button
+                    onclick="this.parentElement.parentElement.style.display = 'none';"
+                >
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <div class="content">
+                <i>Drops</i> is an exhibitory website exploring the consumption
+                of analog culture by digital means, the works that have lost
+                value or place by this process, and the people and projects
+                attempting to reverse these effects.
+            </div>
+        </div>
+
         <div class="root draggable resizable" id="one">
             <div class="bar">
                 <div class="title">Sonic Blue</div>
