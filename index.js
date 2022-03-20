@@ -28,20 +28,57 @@ function getRandomNumber(min, max) {
 
 const position = { x: 0, y: 0 };
 
+// target elements with the "draggable" class
 interact(".draggable").draggable({
-    listeners: {
-        start(event) {
-            console.log(event.type, event.target);
-        },
-        move(event) {
-            position.x += event.dx;
-            position.y += event.dy;
+    // enable inertial throwing
+    inertia: false,
+    // keep the element within the area of it's parent
+    /*modifiers: [
+        interact.modifiers.restrictRect({
+            restriction: "parent",
+            endOnly: true,
+        }),
+    ],*/
+    // enable autoScroll
+    autoScroll: true,
 
-            event.target.style.transform = `translate(${position.x}px, ${position.y}px)`;
+    // only draggable from titlebar
+    allowFrom: ".title",
+
+    listeners: {
+        // call this function on every dragmove event
+        move: dragMoveListener,
+
+        // call this function on every dragend event
+        end(event) {
+            var textEl = event.target.querySelector("p");
+
+            textEl &&
+                (textEl.textContent =
+                    "moved a distance of " +
+                    Math.sqrt(
+                        (Math.pow(event.pageX - event.x0, 2) +
+                            Math.pow(event.pageY - event.y0, 2)) |
+                            0
+                    ).toFixed(2) +
+                    "px");
         },
     },
-    allowFrom: ".title",
 });
+
+function dragMoveListener(event) {
+    var target = event.target;
+    // keep the dragged position in the data-x/data-y attributes
+    var x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
+    var y = (parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
+
+    // translate the element
+    target.style.transform = "translate(" + x + "px, " + y + "px)";
+
+    // update the posiion attributes
+    target.setAttribute("data-x", x);
+    target.setAttribute("data-y", y);
+}
 
 interact(".resizable").resizable({
     edges: { top: true, left: true, bottom: true, right: true },

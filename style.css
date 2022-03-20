@@ -22,6 +22,10 @@ html {
     user-select: none; /* Standard */
 }
 
+.root:hover {
+    z-index: 50;
+}
+
 /* window title bar */
 .title {
     display: flex;
@@ -45,4 +49,7 @@ html {
 }
 #two {
     background-color: limegreen;
+}
+#three {
+    background-color: orange;
 }
