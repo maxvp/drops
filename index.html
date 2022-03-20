@@ -5,12 +5,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
+
+        <!-- js stuff -->
+        <script type="module" src="index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
+
         <title>DROPS</title>
     </head>
     <body>
-        <script type="module" src="index.js"></script>
-
-        <div id="heading">DROPS</div>
+        <div>
+            <p>
+                <a href="https://www.maxvphillips.com/"
+                    ><i data-feather="corner-left-up"></i> Maximillian V.
+                    Phillips</a
+                >
+            </p>
+            <h1 id="heading">DROPS</h1>
+        </div>
 
         <!-- TODO: figure out how to pass "this" context to disappear() function -->
         <div class="root draggable resizable" id="one">
@@ -19,7 +31,7 @@
                 <button
                     onclick="this.parentElement.parentElement.style.display = 'none';"
                 >
-                    X
+                    <i data-feather="x"></i>
                 </button>
             </div>
             <div class="content">Here's some content.</div>
@@ -31,7 +43,7 @@
                 <button
                     onclick="this.parentElement.parentElement.style.display = 'none';"
                 >
-                    X
+                    <i data-feather="x"></i>
                 </button>
             </div>
             <div class="content">Here's some more content.</div>
@@ -43,13 +55,11 @@
                 <button
                     onclick="this.parentElement.parentElement.style.display = 'none';"
                 >
-                    X
+                    <i data-feather="x"></i>
                 </button>
             </div>
             <div class="content">Here's even more content.</div>
         </div>
-
-        <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
     </body>
     <script src="./index.js"></script>
 </html>

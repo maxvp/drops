@@ -112,3 +112,6 @@ interact(".resizable").resizable({
 function disappear() {
     this.style.display = "none";
 }
+
+//import icons
+feather.replace();
