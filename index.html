@@ -14,10 +14,16 @@
             <h1>Drops</h1>
         </div>
 
+        <!-- TODO: figure out how to pass "this" context to disappear() function -->
+        <!-- TODO: refactor flex-basis to exclude button from dragging -->
         <div class="root draggable resizable" id="one">
             <div class="title">
                 <div>QuickTime Player</div>
-                <div>X</div>
+                <button
+                    onclick="this.parentElement.parentElement.style.display = 'none';"
+                >
+                    X
+                </button>
             </div>
             <div class="content">Here's some content.</div>
         </div>
@@ -25,7 +31,11 @@
         <div class="root draggable resizable" id="two">
             <div class="title">
                 <div>MacPaint</div>
-                <div>X</div>
+                <button
+                    onclick="this.parentElement.parentElement.style.display = 'none';"
+                >
+                    X
+                </button>
             </div>
             <div class="content">Here's some more content.</div>
         </div>
@@ -33,7 +43,11 @@
         <div class="root draggable resizable" id="three">
             <div class="title">
                 <div>Lotus 123</div>
-                <div>X</div>
+                <button
+                    onclick="this.parentElement.parentElement.style.display = 'none';"
+                >
+                    X
+                </button>
             </div>
             <div class="content">Here's some more content.</div>
         </div>

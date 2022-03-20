@@ -11,8 +11,8 @@ for (var i = 0; i < divs.length; i++) {
     var thisDiv = divs[i];
 
     // get random numbers for each element
-    randomTop = getRandomNumber(400, winHeight - 400);
-    randomLeft = getRandomNumber(400, winWidth - 400);
+    randomTop = getRandomNumber(0, winHeight - 300);
+    randomLeft = getRandomNumber(0, winWidth - 300);
 
     // update top and left position
     thisDiv.style.top = randomTop + "px";
@@ -80,6 +80,7 @@ function dragMoveListener(event) {
     target.setAttribute("data-y", y);
 }
 
+// make windows resizable
 interact(".resizable").resizable({
     edges: { top: true, left: true, bottom: true, right: true },
     listeners: {
@@ -99,3 +100,8 @@ interact(".resizable").resizable({
         },
     },
 });
+
+// close window
+function disappear() {
+    this.style.display = "none";
+}

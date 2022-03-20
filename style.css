@@ -34,7 +34,7 @@ html {
     background-color: white;
     font-size: 2em;
     font-weight: bold;
-    padding-inline: 0.25em;
+    padding-left: 0.25em;
     border-bottom: var(--border);
 }
 
@@ -52,4 +52,17 @@ html {
 }
 #three {
     background-color: orange;
+}
+
+/* window button */
+.title button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0%);
+    width: 40px;
+}
+.title button:hover {
+    background-color: pink;
+}
+.title button:active {
+    background-color: red;
 }
