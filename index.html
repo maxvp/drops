@@ -14,8 +14,14 @@
         <title>DROPS</title>
     </head>
     <body>
+        <!-- TODO: make cool splash screen -->
+        <!-- 
+        <div id="splash"><button
+                    onclick="this.parentElement.style.display = 'none';"
+                >click to disappear</div>
+        -->
+
         <div>
-            <!-- TODO: come up with more elegant link solution -->
             <p>
                 <a href="https://www.maxvphillips.com/">
                     <i data-feather="arrow-left" id="arrow"></i>&nbsp;</a
@@ -23,7 +29,12 @@
                     Maximillian V. Phillips</a
                 >
             </p>
-            <h1 id="heading">DROPS</h1>
+            <h1 id="heading">
+                DROPS<img
+                    src="images/happy.gif"
+                    alt="Animated GIF of 3D smiley face spinning rapidly"
+                />
+            </h1>
         </div>
 
         <!-- TODO: figure out how to pass "this" context to disappear() function -->
@@ -92,7 +103,13 @@
                     <i data-feather="x"></i>
                 </button>
             </div>
-            <div class="content">Here's some more content.</div>
+            <div class="content">Here's some content.</div>
+            <div>
+                <img
+                    src="images/shrek.gif"
+                    alt="Animated GIF of Shrek dancing"
+                />
+            </div>
         </div>
 
         <div class="root draggable resizable" id="three">
@@ -104,7 +121,7 @@
                     <i data-feather="x"></i>
                 </button>
             </div>
-            <div class="content">Here's even more content.</div>
+            <div class="content">Here's some more content.</div>
         </div>
     </body>
     <script src="./index.js"></script>

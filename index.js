@@ -11,8 +11,8 @@ for (var i = 0; i < divs.length; i++) {
     var thisDiv = divs[i];
 
     // get random dimensions for each element
-    randomWidth = getRandomNumber(400, 600);
-    randomHeight = getRandomNumber(300, 600);
+    randomWidth = getRandomNumber(500, 600);
+    randomHeight = getRandomNumber(350, 400);
 
     // get random positions for each element
     randomTop = getRandomNumber(0, winHeight - randomHeight);

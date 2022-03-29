@@ -18,6 +18,17 @@
 
 /* TODO: add mobile/responsive features */
 
+#splash {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 100;
+    color: white;
+}
+
 /* project title */
 #heading {
     overflow: hidden;
