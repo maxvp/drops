@@ -117,10 +117,14 @@ p a {
     height: auto;
     line-height: 1.1em;
 
-    /* scroll bar */
-    overflow: scroll;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    /* Firefox scrollbar */
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+/* Chrome/Edge/Safari scrollbar */
+.content::-webkit-scrollbar {
+    display: none;
 }
 
 .content a {
@@ -130,11 +134,6 @@ p a {
 .content a:hover {
     color: black;
     background-color: white;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.content::-webkit-scrollbar {
-    display: none;
 }
 
 /* window button */
