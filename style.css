@@ -38,6 +38,31 @@
     padding: 0;
 }
 
+/* test animation */
+section .text {
+    position: absolute;
+    font-size: 1.5em;
+    user-select: none;
+    pointer-events: none;
+    animation: animate 7.5s linear infinite;
+}
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+section .text span {
+    left: 100px;
+    position: absolute;
+    text-transform: uppercase;
+    display: inline-block;
+    transform-origin: 0 100px;
+}
+
 /* global paragraph rules */
 p {
     display: flex;
