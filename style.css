@@ -30,6 +30,12 @@
     background-color: black;
     z-index: 100;
     color: white;
+    opacity: 1;
+    transition: all 10s;
+}
+
+#loggedIn {
+    opacity: 0;
 }
 
 /* project title */

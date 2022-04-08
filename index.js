@@ -1,3 +1,9 @@
+function loginFade() {
+    var element = document.getElementById("splash");
+    //element.classList.add("loggedIn");
+    element.setAttribute("id", "loggedIn");
+}
+
 // randomly generate windows
 // collect all the divs
 var divs = document.getElementsByClassName("root");
