@@ -78,6 +78,10 @@ section .text span {
     transform-origin: 0 100px;
 }
 
+body {
+    overflow: hidden;
+}
+
 /* global paragraph rules */
 p {
     display: flex;

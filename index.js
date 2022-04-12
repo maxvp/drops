@@ -17,20 +17,20 @@ for (var i = 0; i < divs.length; i++) {
     var thisDiv = divs[i];
 
     // get random dimensions for each element
-    randomWidth = getRandomNumber(500, 600);
-    randomHeight = getRandomNumber(350, 400);
+    randomWidth = getRandomNumber(40, 60);
+    randomHeight = getRandomNumber(40, 50);
 
     // get random positions for each element
-    randomTop = getRandomNumber(0, winHeight - randomHeight);
-    randomLeft = getRandomNumber(0, winWidth - randomWidth);
+    randomTop = getRandomNumber(0, 60);
+    randomLeft = getRandomNumber(0, 50);
 
     // update width and height
-    thisDiv.style.width = randomWidth + "px";
-    thisDiv.style.height = randomHeight + "px";
+    thisDiv.style.width = randomWidth + "%";
+    thisDiv.style.height = randomHeight + "%";
 
     // update top and left position
-    thisDiv.style.top = randomTop + "px";
-    thisDiv.style.left = randomLeft + "px";
+    thisDiv.style.top = randomTop + "%";
+    thisDiv.style.left = randomLeft + "%";
 }
 
 // function that returns a random number between a min and max
