@@ -21,7 +21,7 @@
         </div>
     -->
 
-        <div>
+        <section id="header">
             <p>
                 <a href="https://www.maxvphillips.com/">
                     🡔 Maximillian V. Phillips</a
@@ -30,10 +30,10 @@
             <h1 id="heading">
                 DROPS<img
                     src="images/happy.gif"
-                    alt="Animated GIF of 3D smiley face spinning rapidly"
+                    alt="3D smiley face spinning rapidly"
                 />
             </h1>
-        
+
             <!-- TODO: Figure out spinning thing -->
             <!--
             <script>
@@ -42,95 +42,93 @@
             <section>
                 <h1 class="text">DROPS • DROPS • DROPS • DROPS •</h1>
             </section>
-        </div>
-    -->
+        --></section>
 
-        <!-- TODO: figure out how to pass "this" context to disappear() function -->
-        <div class="root draggable resizable" id="description">
-            <div class="bar">
-                <div class="title">Description</div>
-                <button
-                    onclick="this.parentElement.parentElement.style.display = 'none';"
-                >
-                    🞩
-                </button>
-            </div>
-            <div class="content">
-                <div>
-                    <b>Drops</b> is an exhibitory website exploring the
-                    consumption of analog culture by digital means, the works
-                    that have lost value or place by this process, and the
-                    people and projects attempting to reverse these effects.
-                </div>
-            </div>
-        </div>
-
-        <div class="root draggable resizable" id="flash">
-            <div class="bar">
-                <div class="title">The Death of Flash ☠️</div>
-                <button
-                    onclick="this.parentElement.parentElement.style.display = 'none';"
-                >
-                    🞩
-                </button>
-            </div>
-            <div class="content">
-                <div>
-                    First released in 1993 by FutureWave Software, Flash was
-                    adopted by web developers and creatives as a (mostly)
-                    universal platform for multimedia content. Large
-                    communities, such as
-                    <a href="https://www.newgrounds.com/">Newgrounds</a> and
-                    <a href="https://www.albinoblacksheep.com/"
-                        >Albino Blacksheep</a
-                    >, formed around the creation of Flash animation and games.
-                </div>
-                <div>
-                    Flash fell out of favor for its
-                    <a
-                        href="https://web.archive.org/web/20100501010616/https://www.apple.com/hotnews/thoughts-on-flash/"
-                        >poor performance and and security</a
-                    >, and new technologies such as HTML5 took its place.
-                </div>
-                <div>
-                    Preservation projects such as
-                    <a href="https://bluemaxima.org/flashpoint/"
-                        >BlueMaxima's Flashpoint</a
+        <section id="windows">
+            <!-- TODO: figure out how to pass "this" context to disappear() function -->
+            <div class="root draggable resizable" id="description">
+                <div class="bar">
+                    <div class="title">Description</div>
+                    <button
+                        onclick="this.parentElement.parentElement.style.display = 'none';"
                     >
-                    provide a secure sandbox to experience these works natively.
+                        🞩
+                    </button>
+                </div>
+                <div class="content">
+                    <div>
+                        <b>Drops</b> is an exhibitory website exploring the
+                        consumption of analog culture by digital means, the
+                        works that have lost value or place by this process, and
+                        the people and projects attempting to reverse these
+                        effects.
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="root draggable resizable" id="two">
-            <div class="bar">
-                <div class="title">Shrek Green</div>
-                <button
-                    onclick="this.parentElement.parentElement.style.display = 'none';"
-                >
-                    🞩
-                </button>
+            <div class="root draggable resizable" id="flash">
+                <div class="bar">
+                    <div class="title">The Death of Flash ☠️</div>
+                    <button
+                        onclick="this.parentElement.parentElement.style.display = 'none';"
+                    >
+                        🞩
+                    </button>
+                </div>
+                <div class="content">
+                    <div>
+                        First released in 1993 by FutureWave Software, Flash was
+                        adopted by web developers and creatives as a (mostly)
+                        universal platform for multimedia content. Large
+                        communities, such as
+                        <a href="https://www.newgrounds.com/">Newgrounds</a> and
+                        <a href="https://www.albinoblacksheep.com/"
+                            >Albino Blacksheep</a
+                        >, formed around the creation of Flash animation and
+                        games.
+                    </div>
+                    <div>
+                        Flash fell out of favor for its
+                        <a
+                            href="https://web.archive.org/web/20100501010616/https://www.apple.com/hotnews/thoughts-on-flash/"
+                            >poor performance and and security</a
+                        >, and new technologies such as HTML5 took its place.
+                    </div>
+                    <div>
+                        Preservation projects such as
+                        <a href="https://bluemaxima.org/flashpoint/"
+                            >BlueMaxima's Flashpoint</a
+                        >
+                        provide a secure sandbox to experience these works
+                        natively.
+                    </div>
+                </div>
             </div>
-            <div class="content">Here's some content.</div>
-            <div>
-                <img
-                    src="images/shrek.gif"
-                    alt="Animated GIF of Shrek dancing"
-                />
+            <div class="root draggable resizable" id="two">
+                <div class="bar">
+                    <div class="title">Shrek Green</div>
+                    <button
+                        onclick="this.parentElement.parentElement.style.display = 'none';"
+                    >
+                        🞩
+                    </button>
+                </div>
+                <div class="content">Here's some content.</div>
+                <div>
+                    <img src="images/shrek.gif" alt="Shrek dancing" />
+                </div>
             </div>
-        </div>
-
-        <div class="root draggable resizable" id="three">
-            <div class="bar">
-                <div class="title">Clockwork Orange</div>
-                <button
-                    onclick="this.parentElement.parentElement.style.display = 'none';"
-                >
-                    🞩
-                </button>
+            <div class="root draggable resizable" id="three">
+                <div class="bar">
+                    <div class="title">Clockwork Orange</div>
+                    <button
+                        onclick="this.parentElement.parentElement.style.display = 'none';"
+                    >
+                        🞩
+                    </button>
+                </div>
+                <div class="content">Here's some more content.</div>
             </div>
-            <div class="content">Here's some more content.</div>
-        </div>
+        </section>
     </body>
     <script src="./index.js"></script>
 </html>
