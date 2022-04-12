@@ -131,6 +131,7 @@ p a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background-color: white;
     font-size: 2em;
     font-weight: bold;
@@ -145,6 +146,16 @@ p a {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/* button */
+div.bar button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    height: 1.3em;
+    width: 1.3em;
 }
 
 /* window content */

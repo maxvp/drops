@@ -119,9 +119,6 @@ function disappear() {
     this.style.display = "none";
 }
 
-// import icons
-feather.replace();
-
 // split DROPS characters into separate <span> elements
 const text = document.querySelector(".text");
 text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
