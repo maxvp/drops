@@ -166,6 +166,17 @@ div.bar button {
     /* Firefox scrollbar */
     overflow-y: scroll;
     scrollbar-width: none;
+
+    /* scrollable window fade effect */
+    mask-image: linear-gradient(
+        to bottom,
+        black calc(100% - 3em),
+        transparent 100%
+    );
+}
+/* buffer for end of window content */
+.buffer {
+    height: 3em;
 }
 
 /* Chrome/Edge/Safari scrollbar */
