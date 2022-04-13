@@ -97,6 +97,7 @@
                     </div>
                 </div>
             </div>
+            <!--
             <div class="root draggable resizable" id="two">
                 <div class="bar">
                     <div class="title">Shrek Green</div>
@@ -111,6 +112,8 @@
                     <img src="images/shrek.gif" alt="Shrek dancing" />
                 </div>
             </div>
+        -->
+
             <div class="root draggable resizable" id="three">
                 <div class="bar">
                     <div class="title">Clockwork Orange</div>
@@ -124,11 +127,9 @@
             </div>
         </section>
 
-        <section>
-            <div id="taskbar">
-                <div>DROPS</div>
-                <div onload="startTime()" id="clock"></div>
-            </div>
+        <section id="taskbar">
+            <div id="start">DROPS</div>
+            <div id="clock" onload="currentTime()">clock</div>
         </section>
     </body>
     <script src="./index.js"></script>

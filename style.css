@@ -44,15 +44,6 @@
     opacity: 0;
 }
 
-/* project title */
-#heading {
-    overflow: hidden;
-    font-weight: 700;
-    font-size: 10em;
-    margin: 0;
-    padding: 0;
-}
-
 /* test animation */
 section .text {
     position: absolute;
@@ -234,10 +225,21 @@ div.bar button {
 
 /* taskbar */
 #taskbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
     position: absolute;
     z-index: 100;
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 2.5em;
+    padding-inline: 1em;
     background-color: lightblue;
+}
+
+#start {
+    font-weight: bold;
 }
