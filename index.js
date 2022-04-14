@@ -6,6 +6,10 @@ function pickBackground() {
     document.body.style.backgroundImage = url;
 }
 
+// detect mobile
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+//if (!isMobile) {
 // randomly generate windows
 // collect all the divs
 var divs = document.getElementsByClassName("root");
@@ -128,6 +132,7 @@ function addFocus(id) {
     var focus = document.getElementById(id);
     focus.classList.add("active");
 }
+//}
 
 function currentTime() {
     let date = new Date();
