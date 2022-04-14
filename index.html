@@ -40,7 +40,11 @@
 
         <section id="windows">
             <!-- TODO: figure out how to pass "this" context to disappear() function -->
-            <div class="root draggable resizable" id="description">
+            <div
+                class="root draggable resizable"
+                id="description"
+                onclick="addFocus(this.id);"
+            >
                 <div class="bar">
                     <div class="title">Description</div>
                     <button
@@ -61,7 +65,11 @@
                 </div>
             </div>
 
-            <div class="root draggable resizable" id="flash">
+            <div
+                class="root draggable resizable"
+                id="flash"
+                onclick="addFocus(this.id);"
+            >
                 <div class="bar">
                     <div class="title">The Death of Flash ☠️</div>
                     <button
@@ -101,24 +109,11 @@
                 </div>
             </div>
 
-            <!--
-            <div class="root draggable resizable" id="two">
-                <div class="bar">
-                    <div class="title">Shrek Green</div>
-                    <button
-                        onclick="this.parentElement.parentElement.style.display = 'none';"
-                    >
-                        ✕
-                    </button>
-                </div>
-                <div class="content">Here's some content.</div>
-                <div>
-                    <img src="images/shrek.gif" alt="Shrek dancing" />
-                </div>
-            </div>
-        -->
-
-            <div class="root draggable resizable" id="three">
+            <div
+                class="root draggable resizable"
+                id="three"
+                onclick="addFocus(this.id);"
+            >
                 <div class="bar">
                     <div class="title">Clockwork Orange</div>
                     <button
@@ -136,7 +131,6 @@
 
         <section id="taskbar">
             <div id="start">DROPS</div>
-            <div id="clock" onload="currentTime()">clock</div>
         </section>
     </body>
     <script src="./index.js"></script>

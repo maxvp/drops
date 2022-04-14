@@ -1,9 +1,3 @@
-function loginFade() {
-    var element = document.getElementById("splash");
-    //element.classList.add("loggedIn");
-    element.setAttribute("id", "loggedIn");
-}
-
 // randomly generate windows
 // collect all the divs
 var divs = document.getElementsByClassName("root");
@@ -114,46 +108,10 @@ interact(".resizable").resizable({
     },
 });
 
-// close window
-function disappear() {
-    this.style.display = "none";
-}
-
-// split DROPS characters into separate <span> elements
-const text = document.querySelector(".text");
-text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
-
-const element = document.querySelectorAll("span");
-for (let i = 0; i < element.length; i++) {
-    element[i].style.transform = "rotate(" + i * 15 + "deg)";
-}
-
-// clock
-function currentTime() {
-    let date = new Date();
-    let hh = date.getHours();
-    let mm = date.getMinutes();
-    let ss = date.getSeconds();
-    let session = "AM";
-
-    if (hh == 0) {
-        hh = 12;
-    }
-    if (hh > 12) {
-        hh = hh - 12;
-        session = "PM";
-    }
-
-    hh = hh < 10 ? "0" + hh : hh;
-    mm = mm < 10 ? "0" + mm : mm;
-    ss = ss < 10 ? "0" + ss : ss;
-
-    let time = hh + ":" + mm + ":" + ss + " " + session;
-
-    document.getElementById("clock").innerText = time;
-    let t = setTimeout(function () {
-        currentTime();
-    }, 1000);
+// focus window on click
+function addFocus(id) {
+    var element = document.getElementById(id);
+    element.classList.add("focused");
 }
 
 // open all external links in new tab
