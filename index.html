@@ -41,9 +41,9 @@
         <section id="windows">
             <!-- TODO: figure out how to pass "this" context to disappear() function -->
             <div
-                class="root draggable resizable"
+                class="root draggable resizable active"
                 id="description"
-                onclick="addFocus(this.id);"
+                onmousedown="addFocus(this.id);"
             >
                 <div class="bar">
                     <div class="title">Description</div>
@@ -68,7 +68,7 @@
             <div
                 class="root draggable resizable"
                 id="flash"
-                onclick="addFocus(this.id);"
+                onmousedown="addFocus(this.id);"
             >
                 <div class="bar">
                     <div class="title">The Death of Flash ☠️</div>
@@ -112,7 +112,7 @@
             <div
                 class="root draggable resizable"
                 id="three"
-                onclick="addFocus(this.id);"
+                onmousedown="addFocus(this.id);"
             >
                 <div class="bar">
                     <div class="title">Clockwork Orange</div>

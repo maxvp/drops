@@ -108,10 +108,17 @@ interact(".resizable").resizable({
     },
 });
 
-// focus window on click
+// focus window on click/drag
 function addFocus(id) {
-    var element = document.getElementById(id);
-    element.classList.add("focused");
+    var windows = document.getElementsByClassName("active");
+    //console.log(windows);
+
+    while (windows[0]) {
+        windows[0].classList.remove("active");
+    }
+
+    var focus = document.getElementById(id);
+    focus.classList.add("active");
 }
 
 // open all external links in new tab
