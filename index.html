@@ -13,31 +13,6 @@
         <title>DROPS</title>
     </head>
     <body>
-        <!-- TODO: make splash screen cooler -->
-        <!--
-            <div id="splash">
-            <h1>DROPS</h1>
-            <button id="login" onclick="loginFade();">log-in</button>
-        </div>
-    -->
-
-        <section id="header">
-            <p>
-                <a href="https://www.maxvphillips.com/">
-                    ← Maximillian V. Phillips</a
-                >
-            </p>
-
-            <!-- TODO: Figure out spinning thing -->
-            <!--
-            <script>
-                split();
-            </script>
-            <section>
-                <h1 class="text">DROPS • DROPS • DROPS • DROPS •</h1>
-            </section>
-        --></section>
-
         <section id="windows">
             <!-- TODO: figure out how to pass "this" context to disappear() function -->
             <div
@@ -46,7 +21,7 @@
                 onmousedown="addFocus(this.id);"
             >
                 <div class="bar">
-                    <div class="title">Description</div>
+                    <span class="title">Description</span>
                     <button
                         onclick="this.parentElement.parentElement.style.display = 'none';"
                     >
@@ -54,14 +29,14 @@
                     </button>
                 </div>
                 <div class="content">
-                    <div>
+                    <span>
                         <b>Drops</b> is an exhibitory website exploring the
                         consumption of analog culture by digital means, the
                         works that have lost value or place by this process, and
                         the people and projects attempting to reverse these
                         effects.
-                    </div>
-                    <div class="buffer">&nbsp;</div>
+                    </span>
+                    <span class="buffer">&nbsp;</span>
                 </div>
             </div>
 
@@ -71,7 +46,7 @@
                 onmousedown="addFocus(this.id);"
             >
                 <div class="bar">
-                    <div class="title">The Death of Flash ☠️</div>
+                    <span class="title">The Death of Flash ☠️</span>
                     <button
                         onclick="this.parentElement.parentElement.style.display = 'none';"
                     >
@@ -79,7 +54,7 @@
                     </button>
                 </div>
                 <div class="content">
-                    <div>
+                    <span>
                         First released in 1993 by FutureWave Software, Flash was
                         adopted by web developers and creatives as a (mostly)
                         universal platform for multimedia content. Large
@@ -89,23 +64,23 @@
                             >Albino Blacksheep</a
                         >, formed around the creation of Flash animation and
                         games.
-                    </div>
-                    <div>
+                    </span>
+                    <span>
                         Flash fell out of favor for its
                         <a
                             href="https://web.archive.org/web/20100501010616/https://www.apple.com/hotnews/thoughts-on-flash/"
                             >poor performance and security</a
                         >, and new technologies such as HTML5 took its place.
-                    </div>
-                    <div>
+                    </span>
+                    <span>
                         Preservation projects such as
                         <a href="https://bluemaxima.org/flashpoint/"
                             >BlueMaxima's Flashpoint</a
                         >
                         provide a secure sandbox to experience these works as
                         the creators intended.
-                    </div>
-                    <div class="buffer">&nbsp;</div>
+                    </span>
+                    <span class="buffer">&nbsp;</span>
                 </div>
             </div>
 
@@ -115,7 +90,7 @@
                 onmousedown="addFocus(this.id);"
             >
                 <div class="bar">
-                    <div class="title">Clockwork Orange</div>
+                    <span class="title">Clockwork Orange</span>
                     <button
                         onclick="this.parentElement.parentElement.style.display = 'none';"
                     >
@@ -123,14 +98,22 @@
                     </button>
                 </div>
                 <div class="content">
-                    <div>Here's some more content.</div>
-                    <div class="buffer">&nbsp;</div>
+                    <span>Here's some more content.</span>
+                    <span>
+                        <img src="images/happy.gif" alt="spinning 3D smiley" />
+                    </span>
+                    <span class="buffer">&nbsp;</span>
                 </div>
             </div>
         </section>
 
         <section id="taskbar">
-            <div id="start">DROPS</div>
+            <div>
+                <span id="home-link">
+                    <a href="https://www.maxvphillips.com/">←</a>
+                </span>
+            </div>
+            <div id="clock" onload="currentTime()"></div>
         </section>
     </body>
     <script src="./index.js"></script>
