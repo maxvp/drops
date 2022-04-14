@@ -95,6 +95,11 @@ div.bar button {
         black calc(100% - 3em),
         transparent 100%
     );
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        black calc(100% - 3em),
+        transparent 100%
+    );
 }
 /* buffer for end of window content */
 .buffer {
