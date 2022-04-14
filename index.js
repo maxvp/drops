@@ -1,3 +1,11 @@
+// randomize background image
+function pickBackground() {
+    var number = Math.floor(Math.random() * 200) + 1;
+    var url = "url('images/brainsoup/BrainSoup" + number + ".png')";
+
+    document.body.style.backgroundImage = url;
+}
+
 // randomly generate windows
 // collect all the divs
 var divs = document.getElementsByClassName("root");

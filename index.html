@@ -12,7 +12,7 @@
 
         <title>DROPS</title>
     </head>
-    <body>
+    <body onload="pickBackground()">
         <section id="windows">
             <!-- TODO: figure out how to pass "this" context to disappear() function -->
             <div
@@ -36,6 +36,16 @@
                         the people and projects attempting to reverse these
                         effects.
                     </span>
+                    <span class="credit"
+                        >Background images
+                        <a href="aminet.net/search?query=brainsoup"
+                            >(Brain Soup)</a
+                        >
+                        &copy; 1995&#8211;1997
+                        <a href="mailto:brain@skoardy.demon.co.uk"
+                            >Darren Hebden</a
+                        ></span
+                    >
                     <span class="buffer">&nbsp;</span>
                 </div>
             </div>
@@ -108,10 +118,8 @@
         </section>
 
         <section id="taskbar">
-            <div>
-                <span id="home-link">
-                    <a href="https://www.maxvphillips.com/">←</a>
-                </span>
+            <div id="home-link">
+                <a href="https://www.maxvphillips.com/">←</a>
             </div>
             <div id="clock" onload="currentTime()"></div>
         </section>
