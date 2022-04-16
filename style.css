@@ -10,8 +10,6 @@
     font-family: "Anonymous Pro", "Courier New", Courier, monospace;
 }
 
-/* TODO: add mobile/responsive features */
-
 /* prevent scrollbars from  window overflow */
 body {
     overflow: hidden;
@@ -190,4 +188,37 @@ div.bar button {
     background-color: rgba(255, 255, 255, 0.9);
 
     font-weight: bold;
+}
+
+/* mobile/responsive features */
+@media only screen and (orientation: portrait) {
+    body {
+        overflow-y: scroll;
+    }
+    #windows {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    .root {
+        position: inherit;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    }
+    .active {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    }
+    .content {
+        /* scrollable window fade effect */
+        mask-image: none;
+        -webkit-mask-image: none;
+    }
+    div.bar button {
+        display: none;
+    }
+    .buffer {
+        display: none;
+    }
+    #taskbar {
+        display: none;
+    }
 }
