@@ -3,6 +3,7 @@
 /* variables */
 :root {
     --border: 4px black solid;
+    --shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 }
 
 * {
@@ -28,7 +29,7 @@ body {
     min-height: 300px;
 
     touch-action: none;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    box-shadow: var(--shadow);
 
     /* disable text selection */
     -webkit-user-select: none; /* Safari */
@@ -202,11 +203,11 @@ div.bar button {
     }
     .root {
         position: inherit;
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+        box-shadow: var(--shadow);
         touch-action: auto;
     }
     .active {
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+        box-shadow: var(--shadow);
     }
     .content {
         /* scrollable window fade effect */
