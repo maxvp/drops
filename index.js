@@ -59,7 +59,7 @@ if (!isMobile) {
         }),
     ],*/
         // enable autoScroll
-        autoScroll: true,
+        autoScroll: false,
 
         // only draggable from titlebar
         allowFrom: ".title",
