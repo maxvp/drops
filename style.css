@@ -192,7 +192,7 @@ div.bar button {
 }
 
 /* mobile/responsive features */
-@media only screen and (orientation: portrait) {
+@media only screen and (orientation: portrait), screen and (max-width: 812px) {
     body {
         overflow-y: scroll;
     }
