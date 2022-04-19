@@ -1,7 +1,11 @@
+var background = 0;
+
 // randomize background image
 function pickBackground() {
-    var number = Math.floor(Math.random() * 200) + 1;
-    var url = "url('images/brainsoup/BrainSoup" + number + ".png')";
+    background = Math.floor(Math.random() * 200) + 1;
+    var url = "url('images/brainsoup/BrainSoup" + background + ".png')";
+
+    document.getElementById("background-number").innerHTML = background;
 
     document.body.style.backgroundImage = url;
 }
