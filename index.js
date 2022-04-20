@@ -1,13 +1,29 @@
-var background = 0;
+// randomize background image on load
+var background = Math.floor(Math.random() * 200) + 1;
 
-// randomize background image
-function pickBackground() {
-    background = Math.floor(Math.random() * 200) + 1;
-    var url = "url('images/brainsoup/BrainSoup" + background + ".png')";
-
+// set background image
+function setBackground() {
+    let url = "url('images/brainsoup/BrainSoup" + background + ".png')";
     document.getElementById("background-number").innerHTML = background;
-
     document.body.style.backgroundImage = url;
+}
+
+// next background
+function nextBackground() {
+    background++;
+    if (background > 200) {
+        background = 1;
+    }
+    setBackground();
+}
+
+// previous background
+function prevBackground() {
+    background--;
+    if (background < 1) {
+        background = 200;
+    }
+    setBackground();
 }
 
 // detect mobile

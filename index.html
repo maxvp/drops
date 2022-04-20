@@ -33,7 +33,7 @@
 
         <title>DROPS</title>
     </head>
-    <body onload="pickBackground()">
+    <body onload="setBackground()">
         <section id="windows">
             <!-- TODO: figure out how to pass "this" context to disappear() function -->
             <div
@@ -69,6 +69,7 @@
                                 >Darren Hebden</a
                             >.
                         </li>
+                        <!--
                         <li>
                             Favicon by
                             <a href="https://twemoji.twitter.com/">Twemoji</a>,
@@ -78,6 +79,7 @@
                                 >CC BY 4.0</a
                             >.
                         </li>
+                    -->
                         <li>
                             GIFs sourced from
                             <a href="https://gifcities.org/">GifCities</a>.
@@ -158,7 +160,11 @@
             <div id="home-link">
                 <a href="https://www.maxvphillips.com/">← MVP</a>
             </div>
-            <div id="background-number"></div>
+            <div id="bg-control">
+                <button onclick="prevBackground()">←</button>
+                <div id="background-number"></div>
+                <button onclick="nextBackground()">→</button>
+            </div>
             <div id="clock" onload="currentTime()"></div>
         </section>
     </body>
