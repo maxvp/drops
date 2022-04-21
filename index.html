@@ -17,10 +17,10 @@
             <!-- TODO: figure out how to pass "this" context to disappear() function -->
             <div
                 class="root draggable resizable active"
-                id="description"
+                id="about"
                 onmousedown="addFocus(this.id);"
             >
-                <div class="bar">
+                <div class="bar" id="about-bar">
                     <span class="title">🪣 About</span>
                     <button
                         onclick="this.parentElement.parentElement.style.display = 'none';"
@@ -36,6 +36,11 @@
                         the people and projects attempting to reverse these
                         effects.
                     </span>
+                    <span
+                        >This project was created by
+                        <a href="https://www.maxvphillips.com/">Max Phillips</a
+                        >.</span
+                    >
                     <ul class="credit">
                         <li>
                             Background images
@@ -136,9 +141,6 @@
         </section>
 
         <section id="taskbar">
-            <div id="home-link">
-                <a href="https://www.maxvphillips.com/">← MVP</a>
-            </div>
             <div id="bg-control">
                 <button onclick="prevBackground()">←</button>
                 <div id="background-number"></div>
