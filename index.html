@@ -14,7 +14,6 @@
     </head>
     <body onload="setBackground()">
         <section id="windows">
-            <!-- TODO: figure out how to pass "this" context to disappear() function -->
             <div
                 class="root draggable resizable active"
                 id="about"
@@ -22,11 +21,7 @@
             >
                 <div class="bar" id="about-bar">
                     <span class="title">🪣 About</span>
-                    <button
-                        onclick="this.parentElement.parentElement.style.display = 'none';"
-                    >
-                        ✕
-                    </button>
+                    <button onclick="closeWindow(this);">✕</button>
                 </div>
                 <div class="content">
                     <span>
@@ -80,11 +75,7 @@
             >
                 <div class="bar">
                     <span class="title">💥 Flash in the Pan</span>
-                    <button
-                        onclick="this.parentElement.parentElement.style.display = 'none';"
-                    >
-                        ✕
-                    </button>
+                    <button onclick="closeWindow(this);">✕</button>
                 </div>
                 <div class="content">
                     <span>
@@ -124,11 +115,7 @@
             >
                 <div class="bar">
                     <span class="title">🌆 Razed Cities</span>
-                    <button
-                        onclick="this.parentElement.parentElement.style.display = 'none';"
-                    >
-                        ✕
-                    </button>
+                    <button onclick="closeWindow(this);">✕</button>
                 </div>
                 <div class="content">
                     <span>Here's some more content.</span>

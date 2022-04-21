@@ -1,5 +1,6 @@
 // randomize background image on load
 var background = Math.floor(Math.random() * 200) + 1;
+var numWindows = 3;
 
 // set background image
 function setBackground() {
@@ -152,8 +153,14 @@ if (!isMobile) {
         var focus = document.getElementById(id);
         focus.classList.add("active");
     }
+
+    // close window on X click
+    function closeWindow(window) {
+        window.parentElement.parentElement.style.display = "none";
+    }
 }
 
+// get time for clock
 function currentTime() {
     let date = new Date();
     let hh = date.getHours();
@@ -183,6 +190,7 @@ function currentTime() {
 currentTime();
 
 // open all external links in new tab
+// this is generally bad practice but all of my testers wanted it
 (function () {
     const links = document.querySelectorAll(
         "a[href^='https://'], a[href^='http://']"
