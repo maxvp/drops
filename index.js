@@ -153,7 +153,6 @@ if (!isMobile) {
         var focus = document.getElementById(id);
         focus.classList.add("active");
     }
-
     // close window on X click
     function closeWindow(window) {
         window.parentElement.parentElement.style.display = "none";
