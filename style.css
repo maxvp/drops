@@ -177,7 +177,7 @@ div.bar button {
     flex: 1;
     flex-direction: column;
     align-items: center;
-    z-index: 1;
+    z-index: -1;
 }
 #desktop * {
     text-decoration: none;
@@ -185,11 +185,15 @@ div.bar button {
     user-select: none;
 }
 .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 3em;
 }
 .icon-label {
-    font-size: 1em;
-    background-color: rgba(192, 192, 192, 0.85);
+    backdrop-filter: blur(5px);
+    background-color: rgba(192, 192, 192, 0.8);
+    font-size: 0.35em;
     padding-inline: 0.5em;
     margin-bottom: 1em;
 }
