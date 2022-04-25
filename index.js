@@ -153,9 +153,21 @@ if (!isMobile) {
         var focus = document.getElementById(id);
         focus.classList.add("active");
     }
+
+    // get number of windows
+    var openWins = document.querySelectorAll(".root").length;
+
     // close window on X click
     function closeWindow(window) {
-        window.parentElement.parentElement.style.display = "none";
+        window.parentElement.parentElement.style.opacity = "0";
+        window.parentElement.parentElement.style.visibility = "hidden";
+        openWins--;
+
+        if (openWins == 0) {
+            var endScreen = document.getElementById("end");
+            endScreen.style.visibility = "visible";
+            endScreen.style.opacity = "0.9";
+        }
     }
 }
 

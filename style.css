@@ -17,6 +17,30 @@ body {
     background-image: url("images/brainsoup/BrainSoup087.png");
 }
 
+#end {
+    opacity: 0;
+    visibility: hidden;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+
+    backdrop-filter: blur(5px);
+    background-color: white;
+
+    transition: opacity 5s, visibility 5s;
+    transition-delay: 2s;
+}
+
 /* window content */
 .root {
     /* positioning */
@@ -30,6 +54,9 @@ body {
 
     touch-action: none;
     box-shadow: var(--shadow);
+
+    /* fade out animation */
+    transition: opacity 200ms, visibility 201ms;
 
     /* disable text selection */
     -webkit-user-select: none; /* Safari */
@@ -209,7 +236,7 @@ div.bar button {
     justify-content: space-between;
 
     position: absolute;
-    z-index: 100;
+    z-index: 99;
     bottom: 0;
     left: 0;
     width: 100%;
