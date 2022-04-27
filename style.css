@@ -187,7 +187,7 @@ div.bar button {
 /* TODO: implement class for light/dark window text/highlight */
 /* other windows */
 #flash {
-    background-color: #4b0004;
+    background-color: #9b2226;
 }
 #flash > .content {
     color: white;
@@ -200,6 +200,9 @@ div.bar button {
 }
 #tumblr > .content {
     color: white;
+}
+#copyright {
+    background-color: #e9c46a;
 }
 #detritus {
     background-color: darkslategrey;
