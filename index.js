@@ -44,7 +44,7 @@ if (!isMobile) {
         var thisDiv = divs[i];
 
         // get random dimensions for each element
-        randomWidth = getRandomNumber(40, 60);
+        randomWidth = getRandomNumber(30, 40);
         randomHeight = getRandomNumber(40, 50);
 
         // get random positions for each element
