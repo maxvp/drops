@@ -184,6 +184,7 @@ div.bar button {
     background-color: lightgray;
 }
 
+/* TODO: implement class for light/dark window text/highlight */
 /* other windows */
 #flash {
     background-color: firebrick;
