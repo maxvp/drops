@@ -187,13 +187,19 @@ div.bar button {
 /* TODO: implement class for light/dark window text/highlight */
 /* other windows */
 #flash {
-    background-color: firebrick;
+    background-color: #4b0004;
 }
 #flash > .content {
     color: white;
 }
 #geocities {
     background-color: #8daccc;
+}
+#detritus {
+    background-color: darkslategrey;
+}
+#detritus > .content {
+    color: white;
 }
 
 /* desktop icons */
