@@ -17,7 +17,8 @@ body {
     background-image: url("images/brainsoup/BrainSoup087.png");
 }
 
-#end {
+/* splash and end screen */
+.splash {
     opacity: 0;
     visibility: hidden;
 
@@ -34,6 +35,7 @@ body {
     justify-content: center;
     align-items: center;
 
+    font-size: 3em;
     backdrop-filter: blur(5px);
     background-color: white;
 
@@ -153,7 +155,7 @@ div.bar button {
 .content a:hover,
 #taskbar a:hover {
     color: black;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 /* window button */
@@ -189,12 +191,8 @@ div.bar button {
 #flash > .content {
     color: white;
 }
-
-#two {
-    background-color: limegreen;
-}
-#three {
-    background-color: orange;
+#geocities {
+    background-color: #8daccc;
 }
 
 /* desktop icons */
