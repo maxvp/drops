@@ -195,6 +195,12 @@ div.bar button {
 #geocities {
     background-color: #8daccc;
 }
+#tumblr {
+    background-color: #35465c;
+}
+#tumblr > .content {
+    color: white;
+}
 #detritus {
     background-color: darkslategrey;
 }
