@@ -141,6 +141,9 @@ if (!isMobile) {
         },
     });
 
+    // window focus variable
+    var currentZ = document.getElementsByClassName("root"); // top level Z-index = number of windows
+
     // focus window on click/drag
     function addFocus(id) {
         var windows = document.getElementsByClassName("active");
@@ -149,6 +152,8 @@ if (!isMobile) {
         while (windows[0]) {
             windows[0].classList.remove("active");
         }
+
+        document.getElementById("p2").style.zIndex = currentZ + 1;
 
         var focus = document.getElementById(id);
         focus.classList.add("active");
