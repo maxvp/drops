@@ -147,21 +147,18 @@ if (!isMobile) {
     // initialize "About" window on top
     var focusAbout = document.getElementById("about");
     focusAbout.style.zIndex = currentZ;
+    var windows = document.getElementsByClassName("active");
 
     // focus window on click/drag
     function addFocus(id) {
-        var windows = document.getElementsByClassName("active");
-        //console.log(windows);
-
         //remove previous window as active
         while (windows[0]) {
             windows[0].classList.remove("active");
         }
 
+        // make window active (add shadow)
         var focus = document.getElementById(id);
         focus.classList.add("active");
-        //console.log(currentZ);
-
         // increment z-index and bring element to top
         focus.style.zIndex = currentZ++;
     }
