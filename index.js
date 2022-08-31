@@ -65,7 +65,7 @@ if (!isMobile) {
         return Math.random() * (max - min) + min;
     }
 
-    // interactive.js moveable windows
+    // interact.js moveable windows
     const position = { x: 0, y: 0 };
 
     // target elements with the "draggable" class
