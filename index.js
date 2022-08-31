@@ -144,6 +144,10 @@ if (!isMobile) {
     // window focus variable
     var currentZ = document.getElementsByClassName("root").length; // top level Z-index = number of windows
 
+    // initialize "About" window on top
+    var focusAbout = document.getElementById("about");
+    focusAbout.style.zIndex = currentZ;
+
     // focus window on click/drag
     function addFocus(id) {
         var windows = document.getElementsByClassName("active");
