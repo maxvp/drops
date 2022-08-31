@@ -68,7 +68,6 @@ body {
 }
 
 .active {
-    z-index: 50;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
@@ -180,7 +179,6 @@ div.bar button {
 
 /* description */
 #about {
-    z-index: 50;
     background-color: lightgray;
 }
 

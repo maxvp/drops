@@ -142,21 +142,24 @@ if (!isMobile) {
     });
 
     // window focus variable
-    var currentZ = document.getElementsByClassName("root"); // top level Z-index = number of windows
+    var currentZ = document.getElementsByClassName("root").length; // top level Z-index = number of windows
 
     // focus window on click/drag
     function addFocus(id) {
         var windows = document.getElementsByClassName("active");
         //console.log(windows);
 
+        //remove previous window as active
         while (windows[0]) {
             windows[0].classList.remove("active");
         }
 
-        document.getElementById("p2").style.zIndex = currentZ + 1;
-
         var focus = document.getElementById(id);
         focus.classList.add("active");
+        //console.log(currentZ);
+
+        // increment z-index and bring element to top
+        focus.style.zIndex = currentZ++;
     }
 
     // get number of windows
