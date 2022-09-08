@@ -288,12 +288,15 @@ div.bar button {
     #windows {
         display: flex;
         flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
         gap: 0.5em;
     }
     .root {
         position: inherit;
         box-shadow: var(--shadow);
         touch-action: auto;
+        width: 80%;
     }
     .active {
         box-shadow: var(--shadow);
@@ -314,5 +317,13 @@ div.bar button {
     }
     #taskbar {
         display: none;
+    }
+    #mobile-credit {
+        background-color: black;
+        color: white;
+        font-size: 1.25em;
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
 }
