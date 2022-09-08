@@ -56,8 +56,11 @@ if (!isMobile) {
         thisDiv.style.height = randomHeight + "%";
 
         // update top and left position
-        thisDiv.style.top = randomTop + "%";
-        thisDiv.style.left = randomLeft + "%";
+        if (thisDiv.id != "about") {
+            // keep 'About' centered
+            thisDiv.style.top = randomTop + "%";
+            thisDiv.style.left = randomLeft + "%";
+        }
     }
 
     // function that returns a random number between a min and max
