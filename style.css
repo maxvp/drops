@@ -225,10 +225,9 @@ div.bar button {
 #desktop {
     position: absolute;
     display: flex;
-    flex: 1;
     flex-direction: column;
     align-items: center;
-    z-index: -1;
+    z-index: 0;
 }
 #desktop * {
     text-decoration: none;
