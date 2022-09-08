@@ -73,12 +73,12 @@ if (!isMobile) {
         // enable inertial throwing
         inertia: false,
         // keep the element within the area of it's parent
-        /*modifiers: [
-        interact.modifiers.restrictRect({
-            restriction: "parent",
-            endOnly: true,
-        }),
-    ],*/
+        modifiers: [
+            interact.modifiers.restrictRect({
+                restriction: "parent",
+                endOnly: true,
+            }),
+        ],
         // enable autoScroll
         autoScroll: false,
 
