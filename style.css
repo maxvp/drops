@@ -189,6 +189,10 @@ div.bar button {
     background-color: red;
 }
 
+#mobile-credit {
+    display: none;
+}
+
 /* description */
 #about {
     background-color: lightgray;
@@ -319,6 +323,7 @@ div.bar button {
         display: none;
     }
     #mobile-credit {
+        display: block;
         background-color: black;
         color: white;
         font-size: 1.25em;

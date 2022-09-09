@@ -30,7 +30,7 @@ function prevBackground() {
 // detect mobile
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-if (!isMobile) {
+function generateWindows() {
     // randomly generate windows
     // collect all the divs
     var divs = document.getElementsByClassName("root");
@@ -143,43 +143,47 @@ if (!isMobile) {
             },
         },
     });
+}
 
-    // window focus variable
-    var currentZ = document.getElementsByClassName("root").length; // top level Z-index = number of windows
+if (!isMobile) {
+    generateWindows();
+}
 
-    // initialize "About" window on top
-    var focusAbout = document.getElementById("about");
-    focusAbout.style.zIndex = currentZ;
-    var windows = document.getElementsByClassName("active");
+// window focus variable
+var currentZ = document.getElementsByClassName("root").length; // top level Z-index = number of windows
 
-    // focus window on click/drag
-    function addFocus(id) {
-        //remove previous window as active
-        while (windows[0]) {
-            windows[0].classList.remove("active");
-        }
+// initialize "About" window on top
+var focusAbout = document.getElementById("about");
+focusAbout.style.zIndex = currentZ;
+var windows = document.getElementsByClassName("active");
 
-        // make window active (add shadow)
-        var focus = document.getElementById(id);
-        focus.classList.add("active");
-        // increment z-index and bring element to top
-        focus.style.zIndex = currentZ++;
+// focus window on click/drag
+function addFocus(id) {
+    //remove previous window as active
+    while (windows[0]) {
+        windows[0].classList.remove("active");
     }
 
-    // get number of windows
-    var openWins = document.querySelectorAll(".root").length;
+    // make window active (add shadow)
+    var focus = document.getElementById(id);
+    focus.classList.add("active");
+    // increment z-index and bring element to top
+    focus.style.zIndex = currentZ++;
+}
 
-    // close window on X click
-    function closeWindow(window) {
-        window.parentElement.parentElement.style.opacity = "0";
-        window.parentElement.parentElement.style.visibility = "hidden";
-        openWins--;
+// get number of windows
+var openWins = document.querySelectorAll(".root").length;
 
-        if (openWins == 0) {
-            var endScreen = document.getElementById("end");
-            endScreen.style.visibility = "visible";
-            endScreen.style.opacity = "0.9";
-        }
+// close window on X click
+function closeWindow(window) {
+    window.parentElement.parentElement.style.opacity = "0";
+    window.parentElement.parentElement.style.visibility = "hidden";
+    openWins--;
+
+    if (openWins == 0) {
+        var endScreen = document.getElementById("end");
+        endScreen.style.visibility = "visible";
+        endScreen.style.opacity = "0.9";
     }
 }
 
