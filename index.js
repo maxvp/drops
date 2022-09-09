@@ -27,6 +27,11 @@ function prevBackground() {
     setBackground();
 }
 
+// function that returns a random number between a min and max
+function getRandomNumber(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
 // detect mobile
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
@@ -62,92 +67,87 @@ function generateWindows() {
             thisDiv.style.left = randomLeft + "%";
         }
     }
-
-    // function that returns a random number between a min and max
-    function getRandomNumber(min, max) {
-        return Math.random() * (max - min) + min;
-    }
-
-    // interact.js moveable windows
-    const position = { x: 0, y: 0 };
-
-    // target elements with the "draggable" class
-    interact(".draggable").draggable({
-        // enable inertial throwing
-        inertia: false,
-        // keep the element within the area of it's parent
-        modifiers: [
-            interact.modifiers.restrictRect({
-                restriction: "parent",
-                endOnly: true,
-            }),
-        ],
-        // enable autoScroll
-        autoScroll: false,
-
-        // only draggable from titlebar
-        allowFrom: ".title",
-
-        listeners: {
-            // call this function on every dragmove event
-            move: dragMoveListener,
-
-            // call this function on every dragend event
-            end(event) {
-                var textEl = event.target.querySelector("p");
-
-                textEl &&
-                    (textEl.textContent =
-                        "moved a distance of " +
-                        Math.sqrt(
-                            (Math.pow(event.pageX - event.x0, 2) +
-                                Math.pow(event.pageY - event.y0, 2)) |
-                                0
-                        ).toFixed(2) +
-                        "px");
-            },
-        },
-    });
-
-    function dragMoveListener(event) {
-        var target = event.target;
-        // keep the dragged position in the data-x/data-y attributes
-        var x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
-        var y = (parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
-
-        // translate the element
-        target.style.transform = "translate(" + x + "px, " + y + "px)";
-
-        // update the posiion attributes
-        target.setAttribute("data-x", x);
-        target.setAttribute("data-y", y);
-    }
-
-    // make windows resizable
-    interact(".resizable").resizable({
-        edges: { top: true, left: true, bottom: true, right: true },
-        listeners: {
-            move: function (event) {
-                let { x, y } = event.target.dataset;
-
-                x = (parseFloat(x) || 0) + event.deltaRect.left;
-                y = (parseFloat(y) || 0) + event.deltaRect.top;
-
-                Object.assign(event.target.style, {
-                    width: `${event.rect.width}px`,
-                    height: `${event.rect.height}px`,
-                    transform: `translate(${x}px, ${y}px)`,
-                });
-
-                Object.assign(event.target.dataset, { x, y });
-            },
-        },
-    });
 }
 
 if (!isMobile) {
     generateWindows();
 }
+
+// interact.js moveable windows
+const position = { x: 0, y: 0 };
+
+// target elements with the "draggable" class
+interact(".draggable").draggable({
+    // enable inertial throwing
+    inertia: false,
+    // keep the element within the area of it's parent
+    modifiers: [
+        interact.modifiers.restrictRect({
+            restriction: "parent",
+            endOnly: true,
+        }),
+    ],
+    // enable autoScroll
+    autoScroll: false,
+
+    // only draggable from titlebar
+    allowFrom: ".title",
+
+    listeners: {
+        // call this function on every dragmove event
+        move: dragMoveListener,
+
+        // call this function on every dragend event
+        end(event) {
+            var textEl = event.target.querySelector("p");
+
+            textEl &&
+                (textEl.textContent =
+                    "moved a distance of " +
+                    Math.sqrt(
+                        (Math.pow(event.pageX - event.x0, 2) +
+                            Math.pow(event.pageY - event.y0, 2)) |
+                            0
+                    ).toFixed(2) +
+                    "px");
+        },
+    },
+});
+
+function dragMoveListener(event) {
+    var target = event.target;
+    // keep the dragged position in the data-x/data-y attributes
+    var x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
+    var y = (parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
+
+    // translate the element
+    target.style.transform = "translate(" + x + "px, " + y + "px)";
+
+    // update the posiion attributes
+    target.setAttribute("data-x", x);
+    target.setAttribute("data-y", y);
+}
+
+// make windows resizable
+interact(".resizable").resizable({
+    edges: { top: true, left: true, bottom: true, right: true },
+    listeners: {
+        move: function (event) {
+            let { x, y } = event.target.dataset;
+
+            x = (parseFloat(x) || 0) + event.deltaRect.left;
+            y = (parseFloat(y) || 0) + event.deltaRect.top;
+
+            Object.assign(event.target.style, {
+                width: `${event.rect.width}px`,
+                height: `${event.rect.height}px`,
+                transform: `translate(${x}px, ${y}px)`,
+            });
+
+            Object.assign(event.target.dataset, { x, y });
+        },
+    },
+});
 
 // window focus variable
 var currentZ = document.getElementsByClassName("root").length; // top level Z-index = number of windows
