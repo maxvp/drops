@@ -1,6 +1,5 @@
 // randomize background image on load
 var background = Math.floor(Math.random() * 200) + 1;
-var numWindows = 3;
 
 // set background image
 function setBackground() {
@@ -39,9 +38,6 @@ function generateWindows() {
     // randomly generate windows
     // collect all the divs
     var divs = document.getElementsByClassName("root");
-    // get window width and height
-    var winWidth = window.innerWidth;
-    var winHeight = window.innerHeight;
 
     // iterate through divs
     for (var i = 0; i < divs.length; i++) {

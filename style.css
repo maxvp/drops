@@ -125,7 +125,7 @@ div.bar button {
     height: auto;
     line-height: 1.1em;
 
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 /* ===== Scrollbar CSS ===== */
@@ -290,7 +290,7 @@ div.bar button {
 /* mobile/responsive features */
 @media only screen and (orientation: portrait), screen and (max-width: 812px) {
     body {
-        overflow-y: scroll;
+        overflow-y: auto;
     }
     #windows {
         display: flex;
