@@ -125,21 +125,29 @@ div.bar button {
     height: auto;
     line-height: 1.1em;
 
-    /* Firefox scrollbar */
     overflow-y: scroll;
-    scrollbar-width: none;
+}
 
-    /* scrollable window fade effect */
-    mask-image: linear-gradient(
-        to bottom,
-        black calc(100% - 3em),
-        transparent 100%
-    );
-    -webkit-mask-image: linear-gradient(
-        to bottom,
-        black calc(100% - 3em),
-        transparent 100%
-    );
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #000000 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 0px;
+    border: 3px solid #ffffff;
 }
 
 /* credit */
@@ -149,11 +157,6 @@ div.bar button {
     margin-left: 0;
     padding-left: 0;
     line-height: 1.5em;
-}
-
-/* Chrome/Edge/Safari scrollbar */
-.content::-webkit-scrollbar {
-    display: none;
 }
 
 /* links */
